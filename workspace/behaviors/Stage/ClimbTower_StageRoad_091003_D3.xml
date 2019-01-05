@@ -1,0 +1,1073 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5" NoError="true">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="StageAgent" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="iCurObjId" Type="System.Int32" DefaultValue="0" DisplayName="iCurObjId" Desc="当前的GroupId" Display="true" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="140" PrefabName="" PrefabNodeId="-1">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="136" Operator="Equal" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="1" Operator="Equal" Opl="bool Self.StageAgent::isFirstGroup" Opr="const bool false" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="2" Opl="bool Self.StageAgent::isFirstGroup" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="60" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.SelectorProbability" Enable="true" HasOwnPrefabData="false" Id="4" PrefabName="" PrefabNodeId="-1" RandomGenerator="&quot;&quot;">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="5" PrefabName="" PrefabNodeId="-1" Weight="const int 20">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="8" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="9" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600167" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="6" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="10" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="11" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="7" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="164" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="165" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="166" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="167" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="168" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="169" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="170" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="171" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="172" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="173" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="174" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="175" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="12" PrefabName="" PrefabNodeId="-1" Weight="const int 30">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="13" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="14" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600173" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="16" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="17" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="18" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="15" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="176" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="177" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="195" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="196" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="197" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="198" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="199" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="200" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="201" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="203" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="204" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="205" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="19" PrefabName="" PrefabNodeId="-1" Weight="const int 30">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="20" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="21" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600179" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="23" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="24" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="25" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="22" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="206" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="207" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="208" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="209" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="210" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="211" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="212" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="213" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="214" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="215" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="216" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="217" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="26" PrefabName="" PrefabNodeId="-1" Weight="const int 20">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="27" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="28" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600185" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="30" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="31" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="32" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="29" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="218" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="219" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="220" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="221" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="222" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="223" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="224" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="225" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="226" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="227" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="228" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="229" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="274" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="384" Opl="int Self.StageAgent::iNpcObjId" Opr="const int 114600395" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="385" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="386" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iNpcObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="391" Operator="Add" Opl="int Self.StageAgent::iNpcObjId" Opr1="int Self.StageAgent::iNpcObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="387" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="388" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iNpcObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="389" Operator="Add" Opl="int Self.StageAgent::iNpcObjId" Opr1="int Self.StageAgent::iNpcObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="390" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iNpcObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="178" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="180" Opl="int Self.StageAgent::iCurObjId" Opr="const int 114600360" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="182" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="183" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="184" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="181" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="74" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="128" Operator="Equal" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="141" Operator="Equal" Opl="Self.StageAgent::IsGroupOjectAllDie(int Self.StageAgent::iCurGroupNum)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="188" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="190" Opl="int Self.StageAgent::iCurObjId" Opr="const int 114600360" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="192" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="193" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="194" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="179" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="124" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="34" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="129" Operator="Equal" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="35" Operator="Equal" Opl="bool Self.StageAgent::isSecondGroup" Opr="const bool false" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="36" Opl="bool Self.StageAgent::isSecondGroup" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="61" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.SelectorProbability" Enable="true" HasOwnPrefabData="false" Id="38" PrefabName="" PrefabNodeId="-1" RandomGenerator="&quot;&quot;">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="39" PrefabName="" PrefabNodeId="-1" Weight="const int 30">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="40" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="41" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600191" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="43" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="44" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="45" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="3" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="42" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="189" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="191" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="230" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="231" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="232" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="46" PrefabName="" PrefabNodeId="-1" Weight="const int 20">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="47" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="48" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600195" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="50" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="51" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="52" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="49" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="233" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="234" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="235" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="236" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="237" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="238" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="53" PrefabName="" PrefabNodeId="-1" Weight="const int 20">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="54" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="55" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600199" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="57" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="58" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="59" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="56" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="239" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="240" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="241" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="242" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="243" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="244" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="62" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="64" Opl="int Self.StageAgent::iCurObjId" Opr="const int 114600362" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="66" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="67" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="68" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="37" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="65" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="245" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="246" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="125" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="130" Operator="Equal" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="131" Operator="Equal" Opl="Self.StageAgent::IsGroupOjectAllDie(int Self.StageAgent::iCurGroupNum)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="69" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="71" Opl="int Self.StageAgent::iCurObjId" Opr="const int 114600362" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="73" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="100" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="101" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="63" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="72" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="247" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="248" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="132" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="33" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="133" Operator="Equal" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="75" Operator="Equal" Opl="bool Self.StageAgent::isThirdGroup" Opr="const bool false" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="76" Opl="bool Self.StageAgent::isThirdGroup" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="102" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.SelectorProbability" Enable="true" HasOwnPrefabData="false" Id="78" PrefabName="" PrefabNodeId="-1" RandomGenerator="&quot;&quot;">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="79" PrefabName="" PrefabNodeId="-1" Weight="const int 30">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="80" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="81" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600044" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="83" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="84" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="85" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="70" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="82" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="249" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="250" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="251" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="252" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="253" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="86" PrefabName="" PrefabNodeId="-1" Weight="const int 20">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="87" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="88" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600048" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="90" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="91" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="92" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="89" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="254" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="255" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="256" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="257" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="258" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="259" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="93" PrefabName="" PrefabNodeId="-1" Weight="const int 20">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="94" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="95" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600052" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="97" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="98" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="99" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="96" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="260" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="261" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="262" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="263" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                  <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="264" Operator="Add" Opl="int Self.StageAgent::iMonsterObjId" Opr1="int Self.StageAgent::iMonsterObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="265" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="103" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="105" Opl="int Self.StageAgent::iCurObjId" Opr="const int 114600365" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="107" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="127" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="138" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="104" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="126" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="134" Operator="Equal" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="135" Operator="Equal" Opl="Self.StageAgent::IsGroupOjectAllDie(int Self.StageAgent::iCurGroupNum)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="139" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="144" Opl="int Self.StageAgent::iCurObjId" Opr="const int 114600365" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="146" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="147" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="148" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="77" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="142" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="109" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="137" Operator="Equal" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="110" Operator="Equal" Opl="bool Self.StageAgent::isBossGroup" Opr="const bool false" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="111" Opl="bool Self.StageAgent::isBossGroup" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="149" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.SelectorProbability" Enable="true" HasOwnPrefabData="false" Id="112" PrefabName="" PrefabNodeId="-1" RandomGenerator="&quot;&quot;">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="113" PrefabName="" PrefabNodeId="-1" Weight="const int 33">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="114" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="108" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600233" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="115" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="116" PrefabName="" PrefabNodeId="-1" Weight="const int 33">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="117" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="122" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600234" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="118" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="119" PrefabName="" PrefabNodeId="-1" Weight="const int 33">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="120" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="123" Opl="int Self.StageAgent::iMonsterObjId" Opr="const int 114600235" PrefabName="" PrefabNodeId="-1">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="121" Method="Self.StageAgent::CreateGroupObject(int Self.StageAgent::iMonsterObjId,int Self.StageAgent::iCurGroupNum)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                <Comment Background="NoColor" Text="" />
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="150" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="152" Opl="int Self.StageAgent::iCurObjId" Opr="const int 114600367" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="154" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="155" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="156" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="106" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="143" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="145" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="153" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="266" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="267" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="268" Method="Self.StageAgent::CreateObject(int Self.StageAgent::iCurObjId,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="185" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="186" Operator="Equal" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="187" Operator="Equal" Opl="Self.StageAgent::IsGroupOjectAllDie(int Self.StageAgent::iCurGroupNum)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="157" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="158" Opl="int Self.StageAgent::iCount" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="159" Opl="int Self.StageAgent::iCurObjId" Opr="const int 114600367" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="161" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="162" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="163" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="151" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="160" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="269" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="270" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="271" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Compute" Enable="true" HasOwnPrefabData="false" Id="272" Operator="Add" Opl="int Self.StageAgent::iCurObjId" Opr1="int Self.StageAgent::iCurObjId" Opr2="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="273" Method="Self.StageAgent::deleteObject(int Self.StageAgent::iCurObjId)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="202" Opl="int Self.StageAgent::iCurGroupNum" Opr="const int 5" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

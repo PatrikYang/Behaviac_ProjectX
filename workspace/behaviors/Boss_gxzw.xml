@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5" NoError="true">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="FirstAgent" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="iCrazy" Type="System.Boolean" DefaultValue="false" DisplayName="iCrazy" Desc="iCrazy" Display="true" />
+      <Parameter Name="stage" Type="System.Int32" DefaultValue="1" DisplayName="stage" Desc="stage" Display="true" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ALL" HasOwnPrefabData="false" Id="33" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="41" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="42" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="43" Operator="GreaterEqual" Opl="Self.FirstAgent::getHp()" Opr="const float 0.5" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="16" Operator="Equal" Opl="int Self.FirstAgent::stage" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="44" Opl="bool Self.FirstAgent::iCrazy" Opr="const bool false" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="36" Opl="int Self.FirstAgent::stage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="52" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="53" Operator="Less" Opl="Self.FirstAgent::getHp()" Opr="const float 0.5" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="37" Operator="Equal" Opl="int Self.FirstAgent::stage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="17" Operator="Equal" Opl="Self.FirstAgent::aiGoalCastSkill(30001)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="54" Opl="bool Self.FirstAgent::iCrazy" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="38" Opl="int Self.FirstAgent::stage" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="63" Method="Self.FirstAgent::sendMSG(1140001)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="64" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="65" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="66" Operator="Equal" Opl="bool Self.FirstAgent::iCrazy" Opr="const bool false" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="57" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="58" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="59" Operator="Less" Opl="Self.FirstAgent::getDistanceFromTarget()" Opr="const float 5" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="70" Method="Self.FirstAgent::StopMove()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.SelectorProbability" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1" RandomGenerator="&quot;&quot;">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="2" PrefabName="" PrefabNodeId="-1" Weight="const int 2">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="3" Method="Self.FirstAgent::aiGoalCastSkill(200131)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="Gray" Text="普攻-连环击" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="5" PrefabName="" PrefabNodeId="-1" Weight="const int 2">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="7" Method="Self.FirstAgent::aiGoalCastSkill(200132)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="Gray" Text="普攻-砸地" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="11" PrefabName="" PrefabNodeId="-1" Weight="const int 1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="12" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                    <Connector Identifier="GenericChildren">
+                                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="13" Operator="Equal" Opl="Self.FirstAgent::aiGoalCastSkill(200133)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                                        <Comment Background="Gray" Text="技能-孢子冲击" />
+                                      </Node>
+                                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="14" Method="Self.FirstAgent::drawDialog(256001)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                        <Comment Background="NoColor" Text="" />
+                                      </Node>
+                                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="15" Method="Self.FirstAgent::sendMSG(11425601)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                        <Comment Background="NoColor" Text="" />
+                                      </Node>
+                                    </Connector>
+                                  </Node>
+                                </Connector>
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="60" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="61" Operator="GreaterEqual" Opl="Self.FirstAgent::getDistanceFromTarget()" Opr="const float 5" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="62" Method="Self.FirstAgent::aiGoalChase(1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="39" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="40" Operator="Equal" Opl="bool Self.FirstAgent::iCrazy" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="73" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="74" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="75" Operator="Less" Opl="Self.FirstAgent::getDistanceFromTarget()" Opr="const float 5" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="76" Method="Self.FirstAgent::StopMove()" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.SelectorProbability" Enable="true" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1" RandomGenerator="&quot;&quot;">
+                            <Comment Background="NoColor" Text="" />
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="4" PrefabName="" PrefabNodeId="-1" Weight="const int 2">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="6" Method="Self.FirstAgent::aiGoalCastSkill(200131)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="Gray" Text="普攻-连环击" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="22" PrefabName="" PrefabNodeId="-1" Weight="const int 2">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="23" Method="Self.FirstAgent::aiGoalCastSkill(200132)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                    <Comment Background="Gray" Text="普攻-砸地" />
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="25" PrefabName="" PrefabNodeId="-1" Weight="const int 1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="46" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                    <Connector Identifier="GenericChildren">
+                                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="47" Operator="Equal" Opl="Self.FirstAgent::aiGoalCastSkill(200133)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                                        <Comment Background="Gray" Text="技能-孢子冲击" />
+                                      </Node>
+                                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="8" Method="Self.FirstAgent::drawDialog(256001)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                        <Comment Background="NoColor" Text="" />
+                                      </Node>
+                                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="48" Method="Self.FirstAgent::sendMSG(11425601)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                        <Comment Background="NoColor" Text="" />
+                                      </Node>
+                                    </Connector>
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="49" PrefabName="" PrefabNodeId="-1" Weight="const int 1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="50" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                    <Connector Identifier="GenericChildren">
+                                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="51" Operator="Equal" Opl="Self.FirstAgent::aiGoalCastSkill(200270)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                                        <Comment Background="Gray" Text="技能-自爆蘑菇" />
+                                      </Node>
+                                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="9" Method="Self.FirstAgent::drawDialog(256002)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                        <Comment Background="NoColor" Text="" />
+                                      </Node>
+                                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="55" Method="Self.FirstAgent::sendMSG(11425602)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                        <Comment Background="NoColor" Text="" />
+                                      </Node>
+                                    </Connector>
+                                  </Node>
+                                </Connector>
+                              </Node>
+                              <Node Class="PluginBehaviac.Nodes.DecoratorWeight" DecorateWhenChildEnds="false" Enable="true" HasOwnPrefabData="false" Id="56" PrefabName="" PrefabNodeId="-1" Weight="const int 1">
+                                <Comment Background="NoColor" Text="" />
+                                <Connector Identifier="GenericChildren">
+                                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="71" PrefabName="" PrefabNodeId="-1">
+                                    <Comment Background="NoColor" Text="" />
+                                    <Connector Identifier="GenericChildren">
+                                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="72" Operator="Equal" Opl="Self.FirstAgent::aiGoalCastSkill(200271)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                                        <Comment Background="Gray" Text="技能-冲击波" />
+                                      </Node>
+                                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="10" Method="Self.FirstAgent::drawDialog(256003)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                        <Comment Background="NoColor" Text="" />
+                                      </Node>
+                                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="77" Method="Self.FirstAgent::sendMSG(11425603)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                                        <Comment Background="NoColor" Text="" />
+                                      </Node>
+                                    </Connector>
+                                  </Node>
+                                </Connector>
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="67" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="68" Operator="GreaterEqual" Opl="Self.FirstAgent::getDistanceFromTarget()" Opr="const float 5" PrefabName="" PrefabNodeId="-1">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                          <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="69" Method="Self.FirstAgent::aiGoalChase(2)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                            <Comment Background="NoColor" Text="" />
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>

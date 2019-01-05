@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<meta>
+  <types />
+  <agents>
+    <agent classfullname="behaviac::Agent" DisplayName="behaviac::Agent" Desc="behaviac::Agent" IsRefType="true" IsImplemented="true">
+      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
+      </Method>
+    </agent>
+    <agent classfullname="FirstAgent" base="behaviac::Agent" DisplayName="FirstAgent" Desc="FirstAgent" IsRefType="true" IsCustomized="true">
+      <Member Name="bt_timer" DisplayName="bt_timer" Desc="bt_timer" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="a1_flag" DisplayName="a1_flag" Desc="a1_flag" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="true" Static="false" Public="true" Readonly="false" />
+      <Member Name="a2_flag" DisplayName="a2_flag" Desc="a2_flag" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="true" Static="false" Public="true" Readonly="false" />
+      <Member Name="coolDownFlag" DisplayName="coolDownFlag" Desc="coolDownFlag" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="coolDownStart" DisplayName="coolDownStart" Desc="coolDownStart" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="currentHP" DisplayName="currentHP" Desc="currentHP" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="80.01" Static="false" Public="true" Readonly="false" />
+      <Member Name="s1_flag" DisplayName="s1_flag" Desc="s1_flag" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="fTime" DisplayName="fTime" Desc="fTime" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="fcooldown" DisplayName="fcooldown" Desc="fcooldown" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="fcooldownStart" DisplayName="fcooldownStart" Desc="fcooldownStart" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="fCurHp" DisplayName="fCurHp" Desc="fCurHp" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="a3_flag" DisplayName="a3_flag" Desc="a3_flag" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="fDistance" DisplayName="fDistance" Desc="fDistance" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="fSkillTime" DisplayName="fSkillTime" Desc="fSkillTime" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="bIsBossCrazy" DisplayName="bIsBossCrazy" Desc="bIsBossCrazy" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="bIsPatroling" DisplayName="bIsPatroling" Desc="是否正在巡逻" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="fCurDistance" DisplayName="fCurDistance" Desc="fCurDistance" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="bIsbackingToBirthPoint" DisplayName="bIsbackingToBirthPoint" Desc="bIsbackingToBirthPoint" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="fStuntime" DisplayName="fStuntime" Desc="fStuntime" Class="FirstAgent" Type="float" TypeFullName="System.Single" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iTarget" DisplayName="iTarget" Desc="iTarget" Class="FirstAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="isBossFirstSkill" DisplayName="isBossFirstSkill" Desc="isBossFirstSkill" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="entity" DisplayName="entity" Desc="entity" Class="FirstAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="a4_flag" DisplayName="a4_flag" Desc="a4_flag" Class="FirstAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="true" Static="false" Public="true" Readonly="false" />
+      <Method Name="IsMoreThanCount" DisplayName="IsMoreThanCount" Desc="IsMoreThanCount" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="monCount" Type="int" TypeFullName="System.Int32" DisplayName="monCount" Desc="monCount" />
+      </Method>
+      <Method Name="StopMove" DisplayName="StopMove" Desc="StopMove" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="SetTarget" DisplayName="SetTarget" Desc="SetTarget" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="iTargetId" Type="int" TypeFullName="System.Int32" DisplayName="iTargetId" Desc="iTargetId" />
+      </Method>
+      <Method Name="IsInBirthPoint" DisplayName="IsInBirthPoint" Desc="是否已经在出生点" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false" />
+      <Method Name="setAggroList" DisplayName="setAggroList" Desc="设置当前对象的仇恨列表的状态" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="param" Type="int" TypeFullName="System.Int32" DisplayName="param" Desc="param" />
+      </Method>
+      <Method Name="getDistanceFromTarget" DisplayName="getDistanceFromTarget" Desc="获取当前对象到攻击目标之间的距离" Class="FirstAgent" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="true" istask="false" />
+      <Method Name="getTargetCountInRange" DisplayName="getTargetCountInRange" Desc="获取一定范围内处于当前对象仇恨列表上的目标的数量" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="fDistance" Type="float" TypeFullName="System.Single" DisplayName="fDistance" Desc="fDistance" />
+      </Method>
+      <Method Name="getAggroListCount" DisplayName="getAggroListCount" Desc="返回当前对象的仇恨列表中单位的数量，如果仇恨列表处于关闭状态则返回0" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false" />
+      <Method Name="setTargetInAggroList" DisplayName="setTargetInAggroList" Desc="强制将当前对象仇恨列表中指定序号n的单位设定为攻击目标，持续m秒" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="iCount" Type="int" TypeFullName="System.Int32" DisplayName="iCount" Desc="iCount" />
+        <Param Name="fTime" Type="float" TypeFullName="System.Single" DisplayName="fTime" Desc="fTime" />
+      </Method>
+      <Method Name="getEnemyCountInRange" DisplayName="getEnemyCountInRange" Desc="获取active_radius范围内敌对目标的数量" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="fDistance" Type="float" TypeFullName="System.Single" DisplayName="fDistance" Desc="fDistance" />
+      </Method>
+      <Method Name="getHp" DisplayName="getHp" Desc="获取当前对象的生命值" Class="FirstAgent" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="true" istask="false" />
+      <Method Name="setTimer" DisplayName="setTimer" Desc="定义一个定时器" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="cur_id" Type="int" TypeFullName="System.Int32" DisplayName="cur_id" Desc="cur_id" />
+        <Param Name="iTime" Type="int" TypeFullName="System.Int32" DisplayName="iTime" Desc="iTime" />
+      </Method>
+      <Method Name="getTimer" DisplayName="getTimer" Desc="获取当前到期的定时器的ID" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="cur_id" Type="int" TypeFullName="System.Int32" DisplayName="cur_id" Desc="cur_id" />
+      </Method>
+      <Method Name="canCastSkill" DisplayName="canCastSkill" Desc="通过技能施放流程判断当前ID的技能是否满足施放条件" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="iSkillId" Type="int" TypeFullName="System.Int32" DisplayName="iSkillId" Desc="iSkillId" />
+      </Method>
+      <Method Name="aiGoalWander" DisplayName="aiGoalWander" Desc="让AI进入游荡状态，1走路2跑步3滑行" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="fRadius" Type="float" TypeFullName="System.Single" DisplayName="fRadius" Desc="fRadius" />
+        <Param Name="move_type" Type="int" TypeFullName="System.Int32" DisplayName="move_type" Desc="move_type" />
+      </Method>
+      <Method Name="aiGoalChase" DisplayName="aiGoalChase" Desc="让AI进入追击当前仇恨目标状态,1走路2跑步3滑行" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="move_type" Type="int" TypeFullName="System.Int32" DisplayName="move_type" Desc="move_type" />
+      </Method>
+      <Method Name="aiGoalCastSkill" DisplayName="aiGoalCastSkill" Desc="施放某个ID的技能" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="iSkillId" Type="int" TypeFullName="System.Int32" DisplayName="iSkillId" Desc="iSkillId" />
+      </Method>
+      <Method Name="getDistanceToSpawn" DisplayName="getDistanceToSpawn" Desc="获得怪物与出生点的距离" Class="FirstAgent" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="true" istask="false" />
+      <Method Name="returnToSpawn" DisplayName="returnToSpawn" Desc="怪物返回出生点,1走路2跑步3滑行" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="move_type" Type="int" TypeFullName="System.Int32" DisplayName="move_type" Desc="move_type" />
+      </Method>
+      <Method Name="removeTarget" DisplayName="removeTarget" Desc="将指定ID的目标从仇恨列表中移除" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="iTID" Type="int" TypeFullName="System.Int32" DisplayName="iTID" Desc="iTID" />
+      </Method>
+      <Method Name="GetHpLeastEnemy" DisplayName="GetHpLeastEnemy" Desc="获取地图上或仇恨列表中血量最少的敌人id" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="iType" Type="int" TypeFullName="System.Int32" DisplayName="iType" Desc="iType" />
+      </Method>
+      <Method Name="GetHpMostEnemy" DisplayName="GetHpMostEnemy" Desc="获取地图上或仇恨列表中血量最多的敌人id" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="iType" Type="int" TypeFullName="System.Int32" DisplayName="iType" Desc="iType" />
+      </Method>
+      <Method Name="GetDefLeastEnemy" DisplayName="GetDefLeastEnemy" Desc="获取地图上或仇恨列表中防御最低的敌人id" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="iType" Type="int" TypeFullName="System.Int32" DisplayName="iType" Desc="iType" />
+      </Method>
+      <Method Name="GetDefMostEnemy" DisplayName="GetDefMostEnemy" Desc="获取地图上或仇恨列表中防御最高的敌人id" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="iType" Type="int" TypeFullName="System.Int32" DisplayName="iType" Desc="iType" />
+      </Method>
+      <Method Name="GetAtkLeastEnemy" DisplayName="GetAtkLeastEnemy" Desc="获取地图上或仇恨列表中攻击最低的敌人id" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="iType" Type="int" TypeFullName="System.Int32" DisplayName="iType" Desc="iType" />
+      </Method>
+      <Method Name="GetAtkMostEnemy" DisplayName="GetAtkMostEnemy" Desc="获取地图上或仇恨列表中攻击最高的敌人id" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="iType" Type="int" TypeFullName="System.Int32" DisplayName="iType" Desc="iType" />
+      </Method>
+      <Method Name="GetHpLeastFriend" DisplayName="GetHpLeastFriend" Desc="获取地图上血量最少的友方id,ENTITYTYPE_PLAYER = 1,ENTITYTYPE_MONSTER = 2,ENTITYTYPE_NPC = 4,ENTITYTYPE_TRIGGER = 8,ENTITYTYPE_COLLECTION = 16,ENTITYTYPE_ARROW=32" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="entitytype" Type="int" TypeFullName="System.Int32" DisplayName="entitytype" Desc="entitytype" />
+      </Method>
+      <Method Name="GetHpMostFriend" DisplayName="GetHpMostFriend" Desc="获取地图上血量最多的友方id,ENTITYTYPE_PLAYER = 1,ENTITYTYPE_MONSTER = 2,ENTITYTYPE_NPC = 4,ENTITYTYPE_TRIGGER = 8,ENTITYTYPE_COLLECTION = 16,ENTITYTYPE_ARROW=32" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="entitytype" Type="int" TypeFullName="System.Int32" DisplayName="entitytype" Desc="entitytype" />
+      </Method>
+      <Method Name="GetDefLeastFriend" DisplayName="GetDefLeastFriend" Desc="获取地图上防御最低的友方id,ENTITYTYPE_PLAYER = 1,ENTITYTYPE_MONSTER = 2,ENTITYTYPE_NPC = 4,ENTITYTYPE_TRIGGER = 8,ENTITYTYPE_COLLECTION = 16,ENTITYTYPE_ARROW=32" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="entitytype" Type="int" TypeFullName="System.Int32" DisplayName="entitytype" Desc="entitytype" />
+      </Method>
+      <Method Name="GetDefMostFriend" DisplayName="GetDefMostFriend" Desc="获取地图上防御最高的友方id,ENTITYTYPE_PLAYER = 1,ENTITYTYPE_MONSTER = 2,ENTITYTYPE_NPC = 4,ENTITYTYPE_TRIGGER = 8,ENTITYTYPE_COLLECTION = 16,ENTITYTYPE_ARROW=32" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="entitytype" Type="int" TypeFullName="System.Int32" DisplayName="entitytype" Desc="entitytype" />
+      </Method>
+      <Method Name="GetAtkLeastFriend" DisplayName="GetAtkLeastFriend" Desc="获取地图上攻击最低的友方id,ENTITYTYPE_PLAYER = 1,ENTITYTYPE_MONSTER = 2,ENTITYTYPE_NPC = 4,ENTITYTYPE_TRIGGER = 8,ENTITYTYPE_COLLECTION = 16,ENTITYTYPE_ARROW=32" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="entitytype" Type="int" TypeFullName="System.Int32" DisplayName="entitytype" Desc="entitytype" />
+      </Method>
+      <Method Name="GetAtkMostFriend" DisplayName="GetAtkMostFriend" Desc="获取地图上攻击最高的友方id,ENTITYTYPE_PLAYER = 1,ENTITYTYPE_MONSTER = 2,ENTITYTYPE_NPC = 4,ENTITYTYPE_TRIGGER = 8,ENTITYTYPE_COLLECTION = 16,ENTITYTYPE_ARROW=32" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="entitytype" Type="int" TypeFullName="System.Int32" DisplayName="entitytype" Desc="entitytype" />
+      </Method>
+      <Method Name="sendMSG" DisplayName="sendMSG" Desc="给关卡逻辑发送自定义消息" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="Msg" Type="int" TypeFullName="System.Int32" DisplayName="Msg" Desc="Msg" />
+      </Method>
+      <Method Name="checkMSG" DisplayName="checkMSG" Desc="检查从关卡逻辑接收到的消息" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="Msg" Type="int" TypeFullName="System.Int32" DisplayName="Msg" Desc="Msg" />
+      </Method>
+      <Method Name="getDistanceFromOwner" DisplayName="getDistanceFromOwner" Desc="getDistanceFromOwner" Class="FirstAgent" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="true" istask="false" />
+      <Method Name="moveToOwner" DisplayName="moveToOwner" Desc="moveToOwner,1走路2跑步3滑行" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="move_type" Type="int" TypeFullName="System.Int32" DisplayName="move_type" Desc="move_type" />
+      </Method>
+      <Method Name="getTargetFromOwner" DisplayName="getTargetFromOwner" Desc="getTargetFromOwner" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false" />
+      <Method Name="changeToRun" DisplayName="changeToRun" Desc="changeToRun" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="changeToWalk" DisplayName="changeToWalk" Desc="changeToWalk" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="CheckNeedStopBattle" DisplayName="CheckNeedStopBattle" Desc="CheckNeedStopBattle" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="iCount" Type="int" TypeFullName="System.Int32" DisplayName="iCount" Desc="iCount" />
+      </Method>
+      <Method Name="GetDisLeastEnemy" DisplayName="GetDisLeastEnemy" Desc="GetDisLeastEnemy" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="iType" Type="int" TypeFullName="System.Int32" DisplayName="iType" Desc="iType" />
+      </Method>
+      <Method Name="GetSceneLeastDisFriend" DisplayName="GetSceneLeastDisFriend" Desc="GetSceneLeastDisFriend" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="iType" Type="int" TypeFullName="System.Int32" DisplayName="iType" Desc="iType" />
+      </Method>
+      <Method Name="getEnemyCountInSector" DisplayName="getEnemyCountInSector" Desc="获取当前技能伤害范围内的敌人数量" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="phaseid" Type="int" TypeFullName="System.Int32" DisplayName="phaseid" Desc="phaseid" />
+      </Method>
+      <Method Name="enterWayPointMode" DisplayName="enterWayPointMode" Desc="单位进入走路点状态" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="waypointid" Type="int" TypeFullName="System.Int32" DisplayName="waypointid" Desc="waypointid" />
+        <Param Name="startpointid" Type="int" TypeFullName="System.Int32" DisplayName="startpointid" Desc="startpointid" />
+        <Param Name="endpointid" Type="int" TypeFullName="System.Int32" DisplayName="endpointid" Desc="endpointid" />
+        <Param Name="move_type" Type="int" TypeFullName="System.Int32" DisplayName="move_type" Desc="move_type" />
+      </Method>
+      <Method Name="exitWayPointMode" DisplayName="exitWayPointMode" Desc="exitWayPointMode" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="checkWayPoint" DisplayName="checkWayPoint" Desc="checkWayPoint" Class="FirstAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="waypointid" Type="int" TypeFullName="System.Int32" DisplayName="waypointid" Desc="waypointid" />
+        <Param Name="checkpoint" Type="int" TypeFullName="System.Int32" DisplayName="checkpoint" Desc="checkpoint" />
+      </Method>
+      <Method Name="getPursuitDistance" DisplayName="getPursuitDistance" Desc="返回monster表中Pursuit_Distance字段的数值" Class="FirstAgent" ReturnType="float" ReturnTypeFullName="System.Single" Static="false" Public="true" istask="false" />
+      <Method Name="getDistanceFromEntity" DisplayName="getDistanceFromEntity" Desc="获取自身与某个entity目标之间的距离" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="entityid" Type="int" TypeFullName="System.Int32" DisplayName="entityid" Desc="entityid" />
+      </Method>
+      <Method Name="moveToEntity" DisplayName="moveToEntity" Desc="移动到某个entity所在的位置" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="entityid" Type="int" TypeFullName="System.Int32" DisplayName="entityid" Desc="entityid" />
+        <Param Name="move_type" Type="int" TypeFullName="System.Int32" DisplayName="move_type" Desc="move_type" />
+      </Method>
+      <Method Name="getTargetFormEntity" DisplayName="getTargetFormEntity" Desc="获取某个entity的目标" Class="FirstAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="entityid" Type="int" TypeFullName="System.Int32" DisplayName="entityid" Desc="entityid" />
+      </Method>
+      <Method Name="drawDialog" DisplayName="drawDialog" Desc="通过调用怪物AI行为树接口显示怪物头顶气泡的喊话功能" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="dialogid" Type="int" TypeFullName="System.Int32" DisplayName="dialogid" Desc="dialogid" />
+      </Method>
+      <Method Name="printInt" DisplayName="printInt" Desc="打印int类型的变量" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="strVal" Type="string" TypeFullName="System.String" DisplayName="strVal" Desc="strVal" />
+        <Param Name="intVal" Type="int" TypeFullName="System.Int32" DisplayName="intVal" Desc="intVal" />
+      </Method>
+      <Method Name="printFloat" DisplayName="printFloat" Desc="打印float类型的变量" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="strVal" Type="string" TypeFullName="System.String" DisplayName="strVal" Desc="strVal" />
+        <Param Name="floatVal" Type="float" TypeFullName="System.Single" DisplayName="floatVal" Desc="floatVal" />
+      </Method>
+      <Method Name="printString" DisplayName="printString" Desc="打印String类型字符串" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="strVal" Type="string" TypeFullName="System.String" DisplayName="strVal" Desc="strVal" />
+        <Param Name="strDes" Type="string" TypeFullName="System.String" DisplayName="strDes" Desc="strVal" />
+      </Method>
+      <Method Name="setOwner" DisplayName="setOwner" Desc="设置与player的关联，使用这个方法，可以达到：该Obj杀死怪物的数量，计算在角色身上" Class="FirstAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="entityId" Type="int" TypeFullName="System.Int32" DisplayName="entityId" Desc="entityId" />
+      </Method>
+    </agent>
+    <agent classfullname="StageAgent" base="behaviac::Agent" DisplayName="StageAgent" Desc="关卡类" IsRefType="true" IsCustomized="true">
+      <Member Name="Entities" DisplayName="Entities" Desc="所有返回实体的操作都将把实体传入这个变量数组" Class="StageAgent" Type="vector&lt;uint&gt;" TypeFullName="System.Collections.Generic.List`1[[System.UInt32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" defaultvalue="0:" Static="false" Public="true" Readonly="false" />
+      <Member Name="Entity" DisplayName="Entity" Desc="Entity" Class="StageAgent" Type="uint" TypeFullName="System.UInt32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="PassiveID" DisplayName="PassiveID" Desc="PassiveID" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iCount" DisplayName="iCount" Desc="计数，用于循环" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="isRefreshMonster" DisplayName="isRefreshMonster" Desc="isRefreshMonster" Class="StageAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="isFirstGroup" DisplayName="isFirstGroup" Desc="isFirstGroup" Class="StageAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="isSecondGroup" DisplayName="isSecondGroup" Desc="isSecondGroup" Class="StageAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="isThirdGroup" DisplayName="isThirdGroup" Desc="isThirdGroup" Class="StageAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="isBossGroup" DisplayName="isBossGroup" Desc="isBossGroup" Class="StageAgent" Type="bool" TypeFullName="System.Boolean" defaultvalue="false" Static="false" Public="true" Readonly="false" />
+      <Member Name="iForCount" DisplayName="iForCount" Desc="iForCount" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="5" Static="false" Public="true" Readonly="false" />
+      <Member Name="iFirstGroupMonterId" DisplayName="iFirstGroupMonterId" Desc="iFirstGroupMonterId" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iSecondGroupMonsterId" DisplayName="iSecondGroupMonsterId" Desc="iSecondGroupMonsterId" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iThirdGroupMonsterId" DisplayName="iThirdGroupMonsterId" Desc="iThirdGroupMonsterId" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iBossGroupMonsterId" DisplayName="iBossGroupMonsterId" Desc="iBossGroupMonsterId" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="isBossMonster" DisplayName="isBossMonster" Desc="isBossMonster" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iGroupOneObjNum" DisplayName="iGroupOneObjNum" Desc="怪物组ID" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iGroupTwoObjNum" DisplayName="iGroupTwoObjNum" Desc="怪物组ID" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iGroupThreeObjNum" DisplayName="iGroupThreeObjNum" Desc="怪物组ID" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iGroupFourObjNum" DisplayName="iGroupFourObjNum" Desc="怪物组ID" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iGroupBossObjNum" DisplayName="iGroupBossObjNum" Desc="BOSS组id" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iCurGroupNum" DisplayName="iCurGroupNum" Desc="当前怪物组的组ID" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="1" Static="false" Public="true" Readonly="false" />
+      <Member Name="iMonsterObjId" DisplayName="iMonsterObjId" Desc="当前的怪物Objid" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iCurObjId" DisplayName="iCurObjId" Desc="当前的GroupId" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iCreatGuideStage" DisplayName="iCreatGuideStage" Desc="iCreatGuideStage" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iCreatBlockWallStage" DisplayName="iCreatBlockWallStage" Desc="iCreatBlockWallStage" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iDeleteBlockWallStage" DisplayName="iDeleteBlockWallStage" Desc="iDeleteBlockWallStage" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iDeleteGuideStage" DisplayName="iDeleteGuideStage" Desc="iDeleteGuideStage" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Member Name="iNpcObjId" DisplayName="iNpcObjId" Desc="NPCid" Class="StageAgent" Type="int" TypeFullName="System.Int32" defaultvalue="0" Static="false" Public="true" Readonly="false" />
+      <Method Name="CreateObject" DisplayName="CreateObject" Desc="创建object表里的单位，含有个数，波间隔。times是“波数”，计数达到便不再刷。" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="objectid" Type="int" TypeFullName="System.Int32" DisplayName="objectid" Desc="objectid" />
+        <Param Name="times" Type="int" TypeFullName="System.Int32" DisplayName="times" Desc="times" />
+      </Method>
+      <Method Name="IsHavePassive" DisplayName="IsHavePassive" Desc="玩家身上是否有buff" Class="StageAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="PassiveID" Type="int" TypeFullName="System.Int32" DisplayName="PassiveID" Desc="buffid" />
+      </Method>
+      <Method Name="AddPassive" DisplayName="AddPassive" Desc="创建Passive(buff)给Players，持续T毫秒。（Caster来源填空是Manager，1是self，2是实体池的第一个单位）。" Class="StageAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="PassiveId" Type="int" TypeFullName="System.Int32" DisplayName="PassiveId" Desc="buffid" />
+        <Param Name="Caster" Type="int" TypeFullName="System.Int32" DisplayName="Caster" Desc="Caster" />
+        <Param Name="time" Type="int" TypeFullName="System.Int32" DisplayName="time" Desc="time" />
+      </Method>
+      <Method Name="RemovePassive" DisplayName="RemovePassive" Desc="移除实体的Passive" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="PassiveID" Type="int" TypeFullName="System.Int32" DisplayName="PassiveID" Desc="buffid" />
+      </Method>
+      <Method Name="IsPlayerInArea" DisplayName="IsPlayerInArea" Desc="判断玩家是否在区域内" Class="StageAgent" ReturnType="vector&lt;ullong&gt;" ReturnTypeFullName="System.Collections.Generic.List`1[[Behaviac.Design.ullong, BehaviacDesignerBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" Static="false" Public="true" istask="false">
+        <Param Name="triggerid" Type="int" TypeFullName="System.Int32" DisplayName="triggerid" Desc="triggerid" />
+      </Method>
+      <Method Name="GetKillEnemyCount" DisplayName="GetKillEnemyCount" Desc="获得地图上某个怪物id死亡的数量" Class="StageAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="monsterid" Type="int" TypeFullName="System.Int32" DisplayName="monsterid" Desc="monsterid" />
+      </Method>
+      <Method Name="GetMapEnemyCount" DisplayName="GetMapEnemyCount" Desc="获得地图上怪物的数量" Class="StageAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false" />
+      <Method Name="PlayCutScene" DisplayName="PlayCutScene" Desc="播放CutScene" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="cutsceneid" Type="int" TypeFullName="System.Int32" DisplayName="cutsceneid" Desc="cutsceneid" />
+      </Method>
+      <Method Name="SetAirWall" DisplayName="SetAirWall" Desc="启用空气墙" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="AirWallID" Type="int" TypeFullName="System.Int32" DisplayName="AirWallID" Desc="objectid" />
+        <Param Name="isActive" Type="bool" TypeFullName="System.Boolean" DisplayName="isActive" Desc="isActive" />
+      </Method>
+      <Method Name="SetSpawnPoint" DisplayName="SetSpawnPoint" Desc="设置重生点" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="objectid" Type="int" TypeFullName="System.Int32" DisplayName="objectid" Desc="objectid" />
+      </Method>
+      <Method Name="GetObject" DisplayName="GetObject" Desc="基于ObjectID寻找到实体并且存入Entities,返回数组长度。" Class="StageAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false">
+        <Param Name="isEntPool" Type="int" TypeFullName="System.Int32" DisplayName="isEntPool" Desc="objectId" />
+        <Param Name="objectId" Type="int" TypeFullName="System.Int32" DisplayName="objectId" Desc="objectId" />
+      </Method>
+      <Method Name="SpeakBubble" DisplayName="SpeakBubble" Desc="显示对话气泡在Entities组的实体上，持续t秒。" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
+        <Param Name="UI_String" Type="string" TypeFullName="System.String" DisplayName="UI_String" Desc="UI_String" />
+        <Param Name="t" Type="int" TypeFullName="System.Int32" DisplayName="t" Desc="t" />
+      </Method>
+      <Method Name="SendMsgToAI" DisplayName="SendMsgToAI" Desc="给Entities组里的AI行为树发消息（消息ID）" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
+        <Param Name="Msg" Type="int" TypeFullName="System.Int32" DisplayName="Msg" Desc="Msg" />
+      </Method>
+      <Method Name="CheckMsgFromAI" DisplayName="CheckMsgFromAI" Desc="接收AI行为树的消息" Class="StageAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false">
+        <Param Name="Msg" Type="int" TypeFullName="System.Int32" DisplayName="Msg" Desc="Msg" />
+      </Method>
+      <Method Name="SetInstanceEnd" DisplayName="SetInstanceEnd" Desc="命令当前副本结束并赋予胜负结果（以剧情副本0或关卡副本1的形式结束）" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
+        <Param Name="InstanceType" Type="int" TypeFullName="System.Int32" DisplayName="InstanceType" Desc="InstanceType" />
+        <Param Name="Ending" Type="bool" TypeFullName="System.Boolean" DisplayName="Ending" Desc="Ending" />
+      </Method>
+      <Method Name="GetTriggerEntities" DisplayName="GetTriggerEntities" Desc="基于筛选规则（tp=1全局,tp=2实体池）获取进入stage1/位于stage2/离开stage3(1和2机制保证仅有1个，位于可能有多个）Trigger区域的对象，并存在实体池，返回数量。" Class="StageAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false">
+        <Param Name="isEntPool" Type="uint" TypeFullName="System.UInt32" DisplayName="isEntPool" Desc="tp" />
+        <Param Name="TriggerID" Type="uint" TypeFullName="System.UInt32" DisplayName="TriggerID" Desc="TriggerID" />
+        <Param Name="state" Type="int" TypeFullName="System.Int32" DisplayName="state" Desc="stage" />
+      </Method>
+      <Method Name="GetTypeEntities" DisplayName="GetTypeEntities" Desc="基于筛选规则（全局or实体池内）获取同类型的对象，并存在实体池。,ENTITYTYPE_PLAYER = 1,ENTITYTYPE_MONSTER = 2,ENTITYTYPE_NPC = 4,ENTITYTYPE_TRIGGER = 8,ENTITYTYPE_COLLECTION = 16,ENTITYTYPE_ARROW=32" Class="StageAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false">
+        <Param Name="isEntPool" Type="int" TypeFullName="System.Int32" DisplayName="isEntPool" Desc="tp" />
+        <Param Name="Type" Type="int" TypeFullName="System.Int32" DisplayName="Type" Desc="Type" />
+      </Method>
+      <Method Name="GetPassiveEntities" DisplayName="GetPassiveEntities" Desc="基于筛选规则（全局or实体池内）获取T拥有/F不拥有Passive的对象，并存在实体池，返回数组数量。" Class="StageAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false">
+        <Param Name="isEntPool" Type="int" TypeFullName="System.Int32" DisplayName="isEntPool" Desc="tp" />
+        <Param Name="PassiveID" Type="int" TypeFullName="System.Int32" DisplayName="PassiveID" Desc="PassiveID" />
+        <Param Name="isHave" Type="bool" TypeFullName="System.Boolean" DisplayName="isHave" Desc="isHave" />
+      </Method>
+      <Method Name="GetEntityID" DisplayName="GetEntityID" Desc="获取当前实体池的第一个单位的唯一ID。长度为0则返回0。" Class="StageAgent" ReturnType="uint" ReturnTypeFullName="System.UInt32" Static="false" Public="true" istask="false" />
+      <Method Name="teleport" DisplayName="teleport" Desc="同场景传送至一个obj坐标点" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="objid" Type="int" TypeFullName="System.Int32" DisplayName="objid" Desc="" />
+      </Method>
+      <Method Name="GetRandomEntities" DisplayName="GetRandomEntities" Desc="从实体池中随机获取count个实体并保存在实体池中，如果count大于实体池实体数量则取实体池数量上限，返回当前实体池的长度" Class="StageAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="true" istask="false">
+        <Param Name="count" Type="int" TypeFullName="System.Int32" DisplayName="count" Desc="count" />
+      </Method>
+      <Method Name="deleteObject" DisplayName="deleteObject" Desc="删除当前场景中某个objectid的实体" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="objectid" Type="int" TypeFullName="System.Int32" DisplayName="objectid" Desc="objectid" />
+      </Method>
+      <Method Name="drawLevelMsg" DisplayName="drawLevelMsg" Desc="打印副本消息" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="id" Type="int" TypeFullName="System.Int32" DisplayName="id" Desc="id" />
+      </Method>
+      <Method Name="CheckMsgFormTask" DisplayName="CheckMsgFormTask" Desc="接收任务消息" Class="StageAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="false" istask="false">
+        <Param Name="Task" Type="int" TypeFullName="System.Int32" DisplayName="Task" Desc="Task" />
+        <Param Name="EntityID" Type="uint" TypeFullName="System.UInt32" DisplayName="EntityID" Desc="EntityID" />
+      </Method>
+      <Method Name="SendMsgToTask" DisplayName="SendMsgToTask" Desc="给Entities组里的任务发消息(消息ID)" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="false" istask="false">
+        <Param Name="Task" Type="int" TypeFullName="System.Int32" DisplayName="Task" Desc="Msg" />
+        <Param Name="EntityID" Type="uint" TypeFullName="System.UInt32" DisplayName="EntityID" Desc="EntityID" />
+      </Method>
+      <Method Name="printInt" DisplayName="printInt" Desc="打印int类型字段" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="strVal" Type="string" TypeFullName="System.String" DisplayName="strVal" Desc="strVal" />
+        <Param Name="intVal" Type="int" TypeFullName="System.Int32" DisplayName="intVal" Desc="intVal" />
+      </Method>
+      <Method Name="printFloat" DisplayName="printFloat" Desc="打印float类型字段" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="strVal" Type="string" TypeFullName="System.String" DisplayName="strVal" Desc="strVal" />
+        <Param Name="floatVal" Type="float" TypeFullName="System.Single" DisplayName="floatVal" Desc="floatVal" />
+      </Method>
+      <Method Name="printString" DisplayName="printString" Desc="打印String类型字段" Class="StageAgent" ReturnType="string" ReturnTypeFullName="System.String" Static="false" Public="true" istask="false">
+        <Param Name="strVal" Type="string" TypeFullName="System.String" DisplayName="strVal" Desc="strDes" />
+        <Param Name="strDes" Type="string" TypeFullName="System.String" DisplayName="strDes" Desc="strVal" />
+      </Method>
+      <Method Name="Creatmoster_wave" DisplayName="Creatmoster_wave" Desc="创建波次为id的怪物" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="waveid" Type="int" TypeFullName="System.Int32" DisplayName="waveid" Desc="waveid" />
+      </Method>
+      <Method Name="Iskillmoster_wave" DisplayName="Iskillmoster_wave" Desc="波次为id的怪物是否全部死亡" Class="StageAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="waveid" Type="int" TypeFullName="System.Int32" DisplayName="waveid" Desc="waveid" />
+      </Method>
+      <Method Name="Setmoster_area" DisplayName="Setmoster_area" Desc="设置monsterid的怪物坐标为x，y，z" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="monsterid" Type="int" TypeFullName="System.Int32" DisplayName="monsterid" Desc="monsterid" />
+        <Param Name="x" Type="float" TypeFullName="System.Single" DisplayName="x" Desc="x" />
+        <Param Name="y" Type="float" TypeFullName="System.Single" DisplayName="y" Desc="y" />
+        <Param Name="z" Type="float" TypeFullName="System.Single" DisplayName="z" Desc="z" />
+      </Method>
+      <Method Name="Killmoster_wave" DisplayName="Killmoster_wave" Desc="杀死波次为id的所有怪物" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="waveid" Type="int" TypeFullName="System.Int32" DisplayName="waveid" Desc="waveid" />
+      </Method>
+      <Method Name="CreateGroupObject" DisplayName="CreateGroupObject" Desc="创建一个组id的怪物" Class="StageAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="objId" Type="int" TypeFullName="System.Int32" DisplayName="objId" Desc="objId" />
+        <Param Name="groupId" Type="int" TypeFullName="System.Int32" DisplayName="groupId" Desc="groupId" />
+      </Method>
+      <Method Name="IsGroupOjectAllDie" DisplayName="IsGroupOjectAllDie" Desc="这个组id的怪物是否全部死亡" Class="StageAgent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="false" Public="true" istask="false">
+        <Param Name="groupId" Type="int" TypeFullName="System.Int32" DisplayName="groupId" Desc="groupId" />
+      </Method>
+      <Method Name="GetTimeStamp" DisplayName="GetTimeStamp" Desc="获取当前服务器的时间戳，精确到秒" Class="StageAgent" ReturnType="uint" ReturnTypeFullName="System.UInt32" Static="false" Public="true" istask="false" />
+      <Method Name="PlayBossname" DisplayName="PlayBossname" Desc="给客户端发送objid，客户端识别后播放此objid的Boss的镜头特写" Class="StageAgent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="false" Public="false" istask="false">
+        <Param Name="objid" Type="int" TypeFullName="System.Int32" DisplayName="objid" Desc="objid" />
+      </Method>
+    </agent>
+  </agents>
+  <instances />
+</meta>

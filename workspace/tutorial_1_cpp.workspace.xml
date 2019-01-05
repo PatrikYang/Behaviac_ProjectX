@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="tutorial_1_cpp" folder="behaviors" export="..\..\..\..\..\sao_publish\server\AI" language="cpp" version="3">
+  <export>
+    <cpp>
+      <isexported>True</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../../../../../sao_publish/server/AI</folder>
+    </cpp>
+    <cs>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../cs</folder>
+    </cs>
+    <xml>
+      <isexported>True</isexported>
+    </xml>
+    <bson>
+      <isexported>False</isexported>
+    </bson>
+  </export>
+</workspace>

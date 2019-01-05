@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="tutorial_1_cs" folder="behaviors" export="..\cs\exported" language="cs" version="3">
+  <export>
+    <cpp>
+      <isexported>False</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../cpp</folder>
+    </cpp>
+    <cs>
+      <isexported>True</isexported>
+      <exportfilecount>1</exportfilecount>
+      <folder>../../cs</folder>
+    </cs>
+    <xml>
+      <isexported>True</isexported>
+    </xml>
+  </export>
+</workspace>

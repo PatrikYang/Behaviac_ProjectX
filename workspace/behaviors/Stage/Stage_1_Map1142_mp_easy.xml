@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5" NoError="true">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="StageAgent" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <Parameters>
+      <Parameter Name="stage" Type="System.Int32" DefaultValue="1" DisplayName="stage" Desc="stage" Display="true" />
+    </Parameters>
+    <DescriptorRefs value="0:" />
+    <Connector Identifier="GenericChildren">
+      <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ALL" HasOwnPrefabData="false" Id="72" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+        <Comment Background="NoColor" Text="" />
+        <Connector Identifier="GenericChildren">
+          <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="15" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;Stage/Subtree_1_Map114_msg&quot;" Task="&quot;&quot;">
+            <Comment Background="Gray" Text="" />
+          </Node>
+          <Node Class="Behaviac.Design.Nodes.ReferencedBehavior" Enable="true" HasOwnPrefabData="false" Id="17" PrefabName="" PrefabNodeId="-1" ReferenceBehavior="const string &quot;Stage/Subtree_1_Map114_dialog&quot;" Task="&quot;&quot;">
+            <Comment Background="Gray" Text="" />
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="66" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="93" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="94" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="113" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="118" Method="Self.StageAgent::Creatmoster_wave(1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="33" Opl="int Self.StageAgent::stage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="111" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="112" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="117" Operator="Greater" Opl="Self.StageAgent::GetTriggerEntities(0,114200007,1)" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="114" Method="Self.StageAgent::PlayBossname(114200001)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="116" Opl="int Self.StageAgent::stage" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="21" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="进入Boss1区域" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="34" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="29" Operator="GreaterEqual" Opl="Self.StageAgent::GetTriggerEntities(0,114200008,1)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="4" Operator="Greater" Opl="Self.StageAgent::GetTypeEntities(1,1)" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="30" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="35" Opl="int Self.StageAgent::stage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="46" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="47" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="Gray" Text="Boss死了" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="36" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="49" Operator="Equal" Opl="Self.StageAgent::GetKillEnemyCount(257)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="59" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="56" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="122" Method="Self.StageAgent::Creatmoster_wave(2)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="37" Opl="int Self.StageAgent::stage" Opr="const int 5" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="61" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="Gray" Text="玩家死了" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="38" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="73" Operator="GreaterEqual" Opl="Self.StageAgent::GetTriggerEntities(0,114200006,1)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="67" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="74" Opl="int Self.StageAgent::stage" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="50" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="进入Boss2区域" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="39" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 5" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="63" Operator="GreaterEqual" Opl="Self.StageAgent::GetTriggerEntities(0,114200009,1)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="54" Operator="Greater" Opl="Self.StageAgent::GetTypeEntities(1,1)" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="42" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="40" Opl="int Self.StageAgent::stage" Opr="const int 6" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="41" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="78" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="Gray" Text="Boss2死亡" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="81" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 6" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="79" Operator="Equal" Opl="Self.StageAgent::GetKillEnemyCount(256)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="44" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="45" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 6" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="123" Method="Self.StageAgent::Creatmoster_wave(3)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="82" Opl="int Self.StageAgent::stage" Opr="const int 7" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="43" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="Gray" Text="玩家死了" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="75" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 6" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="120" Operator="GreaterEqual" Opl="Self.StageAgent::GetTriggerEntities(0,114200008,1)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="77" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="83" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="80" Opl="int Self.StageAgent::stage" Opr="const int 5" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="51" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="进入Boss3区域" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="84" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 7" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="76" Operator="GreaterEqual" Opl="Self.StageAgent::GetTriggerEntities(0,114200010,1)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="121" Operator="Greater" Opl="Self.StageAgent::GetTypeEntities(1,1)" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="48" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 5" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="85" Opl="int Self.StageAgent::stage" Opr="const int 8" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="86" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="90" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="Gray" Text="Boss3死亡" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="95" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 8" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="91" Operator="Equal" Opl="Self.StageAgent::GetKillEnemyCount(255)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="58" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="57" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 8" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="124" Method="Self.StageAgent::Creatmoster_wave(4)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="97" Opl="int Self.StageAgent::stage" Opr="const int 9" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="87" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="Gray" Text="玩家死亡" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="96" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 8" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="52" Operator="GreaterEqual" Opl="Self.StageAgent::GetTriggerEntities(0,114200009,1)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="89" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="92" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 6" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="98" Opl="int Self.StageAgent::stage" Opr="const int 7" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="70" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="进入Boss4的区域" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="88" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 9" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="71" Operator="GreaterEqual" Opl="Self.StageAgent::GetTriggerEntities(0,114200011,1)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="99" Operator="Greater" Opl="Self.StageAgent::GetTypeEntities(1,1)" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="60" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 7" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="102" Opl="int Self.StageAgent::stage" Opr="const int 10" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="104" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="62" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="Gray" Text="Boss4死亡" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="101" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 10" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="64" Operator="Equal" Opl="Self.StageAgent::GetKillEnemyCount(254)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="65" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="103" Opl="int Self.StageAgent::stage" Opr="const int 11" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="105" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="Gray" Text="玩家死亡" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="106" Operator="Equal" Opl="int Self.StageAgent::stage" Opr="const int 10" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="107" Operator="GreaterEqual" Opl="Self.StageAgent::GetTriggerEntities(0,114200010,1)" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="108" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="109" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 8" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="110" Opl="int Self.StageAgent::stage" Opr="const int 9" PrefabName="" PrefabNodeId="-1">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="5" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="Orange" Text="销毁空气墙" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="6" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="7" Operator="Equal" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="14" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                    <Comment Background="Gray" Text="删除boss1空气墙" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="173" Method="Self.StageAgent::deleteObject(114200094)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="180" Method="Self.StageAgent::deleteObject(114200095)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="68" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="11" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="12" Operator="Equal" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="126" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                    <Comment Background="Gray" Text="删除boss2空气墙" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="129" Method="Self.StageAgent::deleteObject(114200096)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="134" Method="Self.StageAgent::deleteObject(114200097)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="16" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="185" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="186" Operator="Equal" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="187" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                    <Comment Background="Gray" Text="删除boss3空气墙" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="188" Method="Self.StageAgent::deleteObject(114200098)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="189" Method="Self.StageAgent::deleteObject(114200099)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="69" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="196" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="197" Operator="Equal" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="198" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                    <Comment Background="Gray" Text="删除boss4空气墙" />
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="209" Method="Self.StageAgent::deleteObject(114200100)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                      <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="210" Method="Self.StageAgent::deleteObject(114200101)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                        <Comment Background="NoColor" Text="" />
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="119" Opl="int Self.StageAgent::iDeleteBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Selector" Enable="true" HasOwnPrefabData="false" Id="0" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="Orange" Text="创建空气墙" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="8" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="BOSS1前端" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="9" Operator="Equal" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 1" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="100" Method="Self.StageAgent::CreateObject(114200094,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="3" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="1" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="BOSS1后端" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="2" Operator="Equal" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 2" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="13" Method="Self.StageAgent::CreateObject(114200095,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="31" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="32" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="BOSS2前端" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="53" Operator="Equal" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 3" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="115" Method="Self.StageAgent::CreateObject(114200096,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="55" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="127" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="BOSS2后端" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="128" Operator="Equal" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 4" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="131" Method="Self.StageAgent::CreateObject(114200097,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="138" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="136" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="BOSS3前端" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="137" Operator="Equal" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 5" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="10" Method="Self.StageAgent::CreateObject(114200098,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="147" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="145" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="BOSS3后端" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="146" Operator="Equal" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 6" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="149" Method="Self.StageAgent::CreateObject(114200099,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="156" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="154" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="BOSS4前端" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="155" Operator="Equal" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 7" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="172" Method="Self.StageAgent::CreateObject(114200101,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="165" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="163" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="Gray" Text="BOSS4后端" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="164" Operator="Equal" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 8" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="170" Method="Self.StageAgent::CreateObject(114200100,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Assignment" CastRight="false" Enable="true" HasOwnPrefabData="false" Id="171" Opl="int Self.StageAgent::iCreatBlockWallStage" Opr="const int 0" PrefabName="" PrefabNodeId="-1">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+          <Node Class="PluginBehaviac.Nodes.Sequence" Enable="true" HasOwnPrefabData="false" Id="18" PrefabName="" PrefabNodeId="-1">
+            <Comment Background="NoColor" Text="" />
+            <Connector Identifier="GenericChildren">
+              <Node Class="PluginBehaviac.Nodes.Condition" Enable="true" HasOwnPrefabData="false" Id="19" Operator="Equal" Opl="Self.StageAgent::CheckMsgFromAI(11425703)" Opr="const bool true" PrefabName="" PrefabNodeId="-1">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="20" Method="Self.StageAgent::drawLevelMsg(11425703)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                <Comment Background="NoColor" Text="" />
+              </Node>
+              <Node Class="PluginBehaviac.Nodes.Parallel" ChildFinishPolicy="CHILDFINISH_LOOP" Enable="true" ExitPolicy="EXIT_ABORT_RUNNINGSIBLINGS" FailurePolicy="FAIL_ON_ONE" HasOwnPrefabData="false" Id="22" PrefabName="" PrefabNodeId="-1" SuccessPolicy="SUCCEED_ON_ALL">
+                <Comment Background="Orange" Text="BOSS1战斗区域（触发工蜂）" />
+                <Connector Identifier="GenericChildren">
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="23" Method="Self.StageAgent::CreateObject(114200018,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="24" Method="Self.StageAgent::CreateObject(114200019,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="25" Method="Self.StageAgent::CreateObject(114200020,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="26" Method="Self.StageAgent::CreateObject(114200021,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="27" Method="Self.StageAgent::CreateObject(114200022,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                  <Node Class="PluginBehaviac.Nodes.Action" Enable="true" HasOwnPrefabData="false" Id="28" Method="Self.StageAgent::CreateObject(114200023,1)" PrefabName="" PrefabNodeId="-1" ResultFunctor="&quot;&quot;" ResultOption="BT_SUCCESS">
+                    <Comment Background="NoColor" Text="" />
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>
